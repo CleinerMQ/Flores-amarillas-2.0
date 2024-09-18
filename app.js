@@ -1,8 +1,7 @@
-﻿// Aquí puedes agregar más interacción si es necesario.
+// Añade interactividad al mover el mouse para rotar el ramo
 document.addEventListener('mousemove', (event) => {
-    const container = document.querySelector('.flower-container');
+    const bouquet = document.querySelector('.bouquet');
     const xRotation = (event.clientY / window.innerHeight) * 360;
     const yRotation = (event.clientX / window.innerWidth) * 360;
-    container.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+    bouquet.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
 });
-
