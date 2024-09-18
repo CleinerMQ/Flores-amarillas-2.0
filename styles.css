@@ -1,0 +1,80 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa;
+}
+
+.scene {
+    perspective: 1000px;
+}
+
+.flower-container {
+    transform-style: preserve-3d;
+    animation: rotateFlower 8s infinite linear;
+}
+
+.flower {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+}
+
+.petal {
+    width: 60px;
+    height: 120px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 45px;
+    transform-origin: bottom center;
+    transform: rotateX(30deg) translateZ(40px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.petal1 {
+    transform: rotateY(0deg) rotateX(30deg) translateZ(40px);
+}
+
+.petal2 {
+    transform: rotateY(72deg) rotateX(30deg) translateZ(40px);
+}
+
+.petal3 {
+    transform: rotateY(144deg) rotateX(30deg) translateZ(40px);
+}
+
+.petal4 {
+    transform: rotateY(216deg) rotateX(30deg) translateZ(40px);
+}
+
+.petal5 {
+    transform: rotateY(288deg) rotateX(30deg) translateZ(40px);
+}
+
+.center {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+    left: 50px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateZ(40px);
+}
+
+@keyframes rotateFlower {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
