@@ -1,75 +1,86 @@
-﻿body, html {
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e0f7fa;
+    background-color: #f0f8ff;
 }
 
 .scene {
     perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.flower-container {
+.bouquet {
     transform-style: preserve-3d;
-    animation: rotateFlower 8s infinite linear;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    width: 300px;
+    animation: rotateBouquet 10s infinite linear;
 }
 
 .flower {
-    position: relative;
-    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stem {
+    width: 5px;
     height: 150px;
-    transform-style: preserve-3d;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.flower-head {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .petal {
     width: 60px;
-    height: 120px;
+    height: 100px;
     background-color: yellow;
-    border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 45px;
-    transform-origin: bottom center;
-    transform: rotateX(30deg) translateZ(40px);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .petal1 {
-    transform: rotateY(0deg) rotateX(30deg) translateZ(40px);
+    transform: rotate(0deg) translate(50px);
 }
 
 .petal2 {
-    transform: rotateY(72deg) rotateX(30deg) translateZ(40px);
+    transform: rotate(72deg) translate(50px);
 }
 
 .petal3 {
-    transform: rotateY(144deg) rotateX(30deg) translateZ(40px);
+    transform: rotate(144deg) translate(50px);
 }
 
 .petal4 {
-    transform: rotateY(216deg) rotateX(30deg) translateZ(40px);
-}
-
-.petal5 {
-    transform: rotateY(288deg) rotateX(30deg) translateZ(40px);
+    transform: rotate(216deg) translate(50px);
 }
 
 .center {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: orange;
     border-radius: 50%;
     position: absolute;
-    top: 45px;
-    left: 50px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-    transform: translateZ(40px);
 }
 
-@keyframes rotateFlower {
+@keyframes rotateBouquet {
     0% {
         transform: rotateY(0deg);
     }
@@ -77,4 +88,3 @@
         transform: rotateY(360deg);
     }
 }
-
